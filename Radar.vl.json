@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart comparing environmental impacts of Coal, Nuclear, and Natural Gas.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nigel-Lam/FIT3179A2/refs/heads/main/Datasets/Environmental%20Impact%20of%20Nuclear,%20Coal%20and%20Gas%20plants.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": ["Coal Power", "Nuclear Power", "Natural Gas"],
+      "as": ["Power Type", "Value"]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Pollution",
+      "type": "nominal",
+      "axis": {"title": "Environmental Impact Category"}
+    },
+    "xOffset": {"field": "Power Type"},
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "axis": {"title": "Impact (per kWh)"}
+    },
+    "color": {
+      "field": "Power Type",
+      "type": "nominal",
+      "legend": {"title": "Power Source"}
+    }
+  },
+  "config": {}
+}
