@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bubble plot showing the correlation between health and income for 187 countries in the world (modified from an example in Lisa Charlotte Rost's blog post 'One Chart, Twelve Charting Libraries' --http://lisacharlotterost.github.io/2016/05/17/one-chart-code/).",
+  "title": "Viability of each common energy Resource type",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nigel-Lam/FIT3179A2/refs/heads/main/Datasets/Energy%20density.csv"
+  },
+  "params": [{"name": "view", "select": "interval", "bind": "scales"}],
+  "mark": "circle",
+  "encoding": {
+    "y": {
+      "title": "Lifespan before depletion (Years)",
+      "field": "Lifespan",
+      "type": "quantitative",
+      "scale": {"domain": [0, 250]},
+      "axis": {"minExtent": 30}
+    },
+    "x": {
+      "title": "Deposit Weight in Australia (Mega Tonnes)",
+      "field": "Deposit Amount",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "size": {
+      "field": "kWh/kg",
+      "type": "quantitative",
+      "scale": {
+        "type": "log",
+        "domain": [8, 24000000],
+        "range": [50, 5000],
+        "exponent": 0.5
+      },
+      "legend": {"title": "Energy Density", "values": [10, 10000, 10000000]}
+    },
+    "color": {"field": "Resource", "type": "nominal"},
+    "tooltip": [
+      {"title": "Resource type", "field": "Resource", "type": "nominal"},
+      {
+        "title": "Lifespan (years)",
+        "field": "Lifespan",
+        "type": "quantitative"
+      },
+      {
+        "title": "Deposit Amount (Mega Tonnes)",
+        "field": "Deposit Amount",
+        "type": "quantitative"
+      },
+      {
+        "title": "Energy density (kWh/kg)",
+        "field": "kWh/kg",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}
