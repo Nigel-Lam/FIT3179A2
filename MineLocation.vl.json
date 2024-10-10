@@ -40,7 +40,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Deposit", "Operational", "Decomissioned"],
-            "range": ["limegreen", "green", "darkred"]
+            "range": ["limegreen", "green", "black"]
           }
         },
         "tooltip": [
