@@ -23,7 +23,7 @@
       
       <div class="pure-g"> <!-- title -->
         <div class="pure-u-1-1">
-          <h1>Why Australia should make use of it's massive Uranium Deposits</h1>
+          <h1>Why Australia should make use of its massive Uranium Deposits</h1>
         </div>
       </div> <!-- end title -->
     
@@ -34,13 +34,13 @@
         
           <div class="pure-u-1-2">
             <div class="description description-left">
-              <h2></h2>
+              <h2>Title</h2>
               <p>Text</p>
             </div>     
           </div>
           
           <div class="pure-u-1-3" style="width: 31.5%;">
-            <div id="" class="vis-container" style="margin-left: 15px;"></div>
+            <div id="map1" class="vis-container" style="margin-left: 15px;"></div>
           </div> 
       </div> <!-- end row 1 -->
       
@@ -63,6 +63,7 @@
       var bubbleChart = "./EnergyDensity.vl.json"
       var pieChart = "./countryUraniumDeposit.vl.json"
       var radarChart = "./Radar.vl.json"
+      var ausMap = "./MineLocation.vl.json"
       
       vegaEmbed('#bubble', bubbleChart, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -73,6 +74,10 @@
       }).catch(console.error);
 
       vegaEmbed('#radar', radarChart, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+      vegaEmbed('#map1', ausMap, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>      
