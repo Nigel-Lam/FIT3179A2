@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Pie Chart of world Uranium Deposits",
-  "width": 600,
+  "width": 500,
   "height": 400,
   "title": {"text": "Percentage of World Uranium Deposits", "frame": "group"},
   "data": {
