@@ -11,7 +11,7 @@
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
     "theta": {"field": "tonnes", "type": "quantitative", "stack": "normalize"},
-    "color": {"field": "Country", "type": "nominal"},
+    "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "category20"}},
     "opacity": {
       "condition": {"param": "country_display", "value": 1},
       "value": 0.2
