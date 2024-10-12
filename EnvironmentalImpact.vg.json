@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A radar chart example, showing multiple dimensions in a radial layout.",
-  "width": 500,
-  "height": 500,
+  "width": 600,
+  "height": 600,
   "title": {
     "text": "Environmental Impact of Energy Sources",
     "fontSize": 18,
     "fontWeight": "bold",
     "anchor": "middle"
-  },
+    },
   "padding": 525,
   "autosize": {"type": "none", "contains": "padding"},
   "signals": [{"name": "radius", "update": "width / 2"}],
@@ -16,86 +16,21 @@
     {
       "name": "table",
       "values": [
-        {
-          "key": "Greenhouse Gas Emissions",
-          "value": 1,
-          "category": "Coal",
-          "trueValue": 1050
-        },
-        {
-          "key": "Air Pollution",
-          "value": 1,
-          "category": "Coal",
-          "trueValue": 5.08
-        },
+        {"key": "Greenhouse Gas Emissions", "value": 1, "category": "Coal", "trueValue": 1050},
+        {"key": "Air Pollution", "value": 1, "category": "Coal", "trueValue": 5.08},
         {"key": "Waste", "value": 1, "category": "Coal", "trueValue": 34.25},
-        {
-          "key": "Nuclear Waste",
-          "value": 0.11,
-          "category": "Coal",
-          "trueValue": 4.6
-        },
-        {
-          "key": "Water Usage",
-          "value": 0.87,
-          "category": "Coal",
-          "trueValue": 2.6
-        },
-        {
-          "key": "Greenhouse Gas Emissions",
-          "value": 0.033,
-          "category": "Nuclear",
-          "trueValue": 35
-        },
-        {
-          "key": "Air Pollution",
-          "value": 0,
-          "category": "Nuclear",
-          "trueValue": 0
-        },
-        {
-          "key": "Waste",
-          "value": 0.0009,
-          "category": "Nuclear",
-          "trueValue": 0.03
-        },
-        {
-          "key": "Nuclear Waste",
-          "value": 1,
-          "category": "Nuclear",
-          "trueValue": "42"
-        },
-        {
-          "key": "Water Usage",
-          "value": 1,
-          "category": "Nuclear",
-          "trueValue": "3"
-        },
-        {
-          "key": "Greenhouse Gas Emissions",
-          "value": 0.43,
-          "category": "Natural Gas",
-          "trueValue": 450
-        },
-        {
-          "key": "Air Pollution",
-          "value": 0.89,
-          "category": "Natural Gas",
-          "trueValue": 4.55
-        },
+        {"key": "Nuclear Waste", "value": 0.11, "category": "Coal", "trueValue": 4.6},
+        {"key": "Water Usage", "value": 0.87, "category": "Coal", "trueValue": 2.6},
+        {"key": "Greenhouse Gas Emissions", "value": 0.033, "category": "Nuclear", "trueValue": 35},
+        {"key": "Air Pollution", "value": 0, "category": "Nuclear", "trueValue": 0},
+        {"key": "Waste", "value": 0.0009, "category": "Nuclear", "trueValue": 0.03},
+        {"key": "Nuclear Waste", "value": 1, "category": "Nuclear", "trueValue": "42"},
+        {"key": "Water Usage", "value": 1, "category": "Nuclear", "trueValue": "3"},
+        {"key": "Greenhouse Gas Emissions", "value": 0.43, "category": "Natural Gas", "trueValue": 450},
+        {"key": "Air Pollution", "value": 0.89, "category": "Natural Gas", "trueValue": 4.55},
         {"key": "Waste", "value": 0, "category": "Natural Gas", "trueValue": 0},
-        {
-          "key": "Nuclear Waste",
-          "value": 0,
-          "category": "Natural Gas",
-          "trueValue": 0
-        },
-        {
-          "key": "Water Usage",
-          "value": 0.3,
-          "category": "Natural Gas",
-          "trueValue": 0.9
-        }
+        {"key": "Nuclear Waste", "value": 0, "category": "Natural Gas", "trueValue": 0},
+        {"key": "Water Usage", "value": 0.3, "category": "Natural Gas", "trueValue": 0.9}
       ]
     },
     {
