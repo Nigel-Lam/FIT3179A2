@@ -33,7 +33,14 @@
       },
       "legend": {"title": "Energy Density", "values": [10, 10000, 10000000]}
     },
-    "color": {"field": "Resource", "type": "nominal"},
+    "color": {
+      "field": "Resource", 
+      "type": "nominal",
+      "scale": {
+        "domain": ["Uranium", "Oil", "Coal", "Gas"],
+        "range": ["limegreen", "orange", "coral", "#68bbe3"]
+      }
+      },
     "tooltip": [
       {"title": "Resource type", "field": "Resource", "type": "nominal"},
       {
