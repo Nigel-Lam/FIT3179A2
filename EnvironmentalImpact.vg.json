@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A radar chart example, showing multiple dimensions in a radial layout.",
-  "width": 400,
-  "height": 600,
+  "width": 300,
+  "height": 300,
   "title": {
     "text": "Environmental Impact of Energy Sources",
     "fontSize": 18,
