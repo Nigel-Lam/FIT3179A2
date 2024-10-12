@@ -104,13 +104,14 @@
                  <li><a href="https://www.euronuclear.org/glossary/fuel-comparison" target="_blank">Source 12</a></li>
                 <!-- Add more sources -->
             </ul>
+         </div>
     </footer>
 
     <script type="text/javascript">
       var bubbleChart = "./EnergyDensity.vl.json"
       var pieChart = "./countryUraniumDeposit.vl.json"
       var ausMap = "./mineLocation.vl.json"
-      var radar = "./EnvironmentalImpact.vg.json"
+      var radarChart = "./EnvironmentalImpact.vg.json"
       
       vegaEmbed('#bubble', bubbleChart, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -124,7 +125,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
 
-      vegaEmbed('#radar', radar, { "actions": false }).then(function (result) {
+      vegaEmbed('#radar', radarChart, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>      
