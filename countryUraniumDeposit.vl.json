@@ -3,7 +3,7 @@
   "description": "Pie Chart of world Uranium Deposits",
   "width": "container",
   "title": {
-    "text": {"expr": "chart_selection == 'Reserves' ? 'World Percentage of Uranium Deposits' : 'World Percentage of Uranium Exports'"}, 
+    "text": {"expr": "chart_selection == 'Deposits' ? 'World Percentage of Uranium Deposits' : 'World Percentage of Uranium Exports'"}, 
     "frame": "group", 
     "anchor": "middle", 
     "fontSize": 15, 
@@ -42,7 +42,7 @@
         "options": ["Deposits", "Exports"],
         "name": "View "
       },
-      "value": "Reserves"
+      "value": "Deposits"
     }
   ],
   "transform": [
