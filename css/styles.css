@@ -42,3 +42,10 @@ h1 {
 .small-font {
     font-size: 14px;
 }
+
+#pie {
+    border: 2px solid black; 
+    padding: 20px; 
+    margin: 20px;  
+    border-radius: 10px; 
+}
