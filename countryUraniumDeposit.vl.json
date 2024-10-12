@@ -47,15 +47,15 @@
   ],
   "transform": [
     {
-      "calculate": "chart_selection == 'Reserves' ? datum.tonnes : datum.Export",
+      "calculate": "chart_selection == 'Deposits' ? datum.tonnes : datum.Export",
       "as": "selected_tonnes"
     },
     {
-      "calculate": "chart_selection == 'Reserves' ? datum.Percentage_reserves : datum.Percentage_exports",
+      "calculate": "chart_selection == 'Deposits' ? datum.Percentage_reserves : datum.Percentage_exports",
       "as": "selected_percentage"
     },
     {
-      "filter": "chart_selection == 'Reserves' || datum.Export != null"
+      "filter": "chart_selection == 'Deposits' || datum.Export != null"
     }
     ],
   "config": {}
