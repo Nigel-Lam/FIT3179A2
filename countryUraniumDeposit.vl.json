@@ -5,12 +5,12 @@
   "title": {"text": "Percentage of World Uranium Deposits", "frame": "group"},
   "data": {
     "name": "source_1",
-    "url": "https://raw.githubusercontent.com/Nigel-Lam/Homework4/refs/heads/main/Dataset/World_uranium_deposit.csv",
+    "url": "https://raw.githubusercontent.com/Nigel-Lam/FIT3179A2/refs/heads/main/Datasets/UraniumReservesExport.csv",
     "format": {"type": "csv"}
   },
   "mark": {"type": "arc", "tooltip": true},
   "encoding": {
-    "theta": {"field": "tonnes", "type": "quantitative", "stack": "normalize"},
+    "theta": {"field": "selected_tonnes", "type": "quantitative", "stack": "normalize"},
     "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "category20"}},
     "opacity": {
       "condition": {"param": "country_display", "value": 1},
@@ -18,12 +18,10 @@
     },
     "tooltip": [
       {"title": "Country", "field": "Country", "type": "nominal"},
-      {"title": "Tonnes of Uranium", "field": "tonnes", "type": "quantitative"},
-      {
-        "title": "World Percentage of Uranium Deposit",
-        "field": "Percentage",
-        "type": "nominal"
-      }
+      {"title": "Uranium Deposit (t)", "field": "tonnes", "type": "quantitative"},
+      {"title": "World Percentage of Uranium Deposit", "field": "Percentage_reserves", "type": "nominal"},
+      {"title": "Uranium Export (t)", "field": "Export", "type": "quantitative"},
+      {"title": "World Percentage of Uranium Export", "field": "Percentage_exports", "type": "nominal"}
     ]
   },
   "params": [
@@ -33,17 +31,27 @@
       "bind": "legend"
     },
     {
-      "name": "Tonnes_Above",
-      "value": 0,
+      "name": "chart_selection",
       "bind": {
-        "input": "range",
-        "min": 50000,
-        "max": 800000,
-        "step": 1000,
-        "name": "Minimum tonnes"
-      }
+        "input": "select",
+        "options": ["Reserves", "Exports"],
+        "name": "View"
+      },
+      "value": "Reserves"
     }
   ],
-  "transform": [{"filter": "datum.tonnes > Tonnes_Above"}],
+  "transform": [
+    {
+      "calculate": "chart_selection == 'Reserves' ? datum.tonnes : datum.Export",
+      "as": "selected_tonnes"
+    },
+    {
+      "calculate": "chart_selection == 'Reserves' ? datum.Percentage_reserves : datum.Percentage_exports",
+      "as": "selected_percentage"
+    },
+    {
+      "filter": "chart_selection == 'Reserves' || datum.Export != null"
+    }
+    ],
   "config": {}
 }
