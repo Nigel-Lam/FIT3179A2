@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 450,
+  "width": "container",
   "background": "aliceblue",
   "title": "Location of Uranium deposits and Mines in Australia",
   "projection": {"type": "mercator"},
