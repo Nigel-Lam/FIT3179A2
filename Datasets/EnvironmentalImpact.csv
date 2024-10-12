@@ -1,4 +1,4 @@
-﻿key,Power,Normalized,Value
+﻿key,category,value,trueValue
 Greenhouse Gas Emissions,Coal Power,1,1050
 Greenhouse Gas Emissions,Nuclear Power,0.033,35
 Greenhouse Gas Emissions,Natural Gas,0.43,450
