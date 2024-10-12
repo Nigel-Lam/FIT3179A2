@@ -2,9 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Location of Uranium mines/deposits in Australia", 
   "width": "container",
-  "height": 400,
+  "height": 500,
   "background": "aliceblue",
-  "title": "Location of Uranium deposits and Mines in Australia",
+  "title": {"text": "Location of Uranium deposits and Mines in Australia", "anchor": "middle", "fontSize": 15, "fontWeight": "bold"},
   "projection": {"type": "mercator"},
   "layer": [
     {
