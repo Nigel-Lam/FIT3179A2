@@ -42,3 +42,15 @@ h1 {
 .small-font {
     font-size: 14px;
 }
+
+footer {
+    background-color: #f1f1f1;  /* Light gray background */
+    padding: 20px 0;            /* Space inside the footer */
+    text-align: center;         /* Center text horizontally */
+    font-size: 14px;            /* Set font size */
+    color: #555;                /* Text color */
+    position: relative;         /* Allow margin-top */
+    width: 100%;                /* Full width of the page */
+    margin-top: 50px;           /* Space above the footer */
+    clear: both;                /* Ensure no overlap with floated elements */
+}
